@@ -67,4 +67,4 @@ The _gate_ or _base_ is the lead that controls current flow between the _source_
 
 [diagram of a few different three lead transistor packages]
 
-# [Next - Physics of Transistors](../Physics)
+# [Next - Physics of MOSFETs](../MOSFET_Physics)
