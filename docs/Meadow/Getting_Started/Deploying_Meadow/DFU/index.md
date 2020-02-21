@@ -21,8 +21,6 @@ We'll use the _dfu-util_ app to flash the firmware files to Meadow.
 
 ### Windows
 
-*Note - Windows users can flash the latest Meadow OS from within Visual Studio 2019.*
-
 You can download dfu-util from [Sourceforge](http://dfu-util.sourceforge.net/releases/dfu-util-0.9-win64.zip).
 
 Extract the zip to a convenient location that you can access using the Terminal/Command Prompt.
@@ -76,9 +74,9 @@ On **Windows**, you'll need to make the `dfu-util.exe` executable accessible. Yo
 
 To flash Meadow to the board:
 
- 1. Unzip the Meadow.OS.zip package. It should contain a file named `Meadow.OS.bin`.
+ 1. Unzip the Meadow.OS.zip package. It should contain `Meadow.OS_Kernel.bin` and `Meadow.OS_Runtime.bin` files.
  2. Open the Command Prompt (Windows) or Terminal (macOS/Linux).
- 3. Navigate to the folder that contains the Meadow OS bin file.
+ 3. Navigate to the folder that contains the Meadow bin files.
  4. Enter `dfu-util --list` to see a list of dfu enabled devices:
 
   ![dfu-util --list (Windows)](./dfu_serial.png){:standalone}
@@ -97,7 +95,8 @@ To flash Meadow to the board:
  the previous step. Each command should complete with `File downloaded successfully`
 
    ```bash
-   dfu-util -a 0 -S [DEVICE_SERIAL] -D Meadow.OS.bin -s 0x08000000
+   dfu-util -a 0 -S [DEVICE_SERIAL] -D Meadow.OS_Kernel.bin -s 0x08000000 &&
+   dfu-util -a 0 -S [DEVICE_SERIAL] -D Meadow.OS_Runtime.bin -s 0x08040000
    ```
    
 When the flash is complete, press the reset (**RST**) button to exit DFU bootloader mode and boot into Meadow.OS.
