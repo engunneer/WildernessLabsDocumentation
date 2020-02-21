@@ -46,5 +46,5 @@ To wire a Ags01Db to your Meadow board, connect the following:
 
 It should look like the following diagram:
 
-<img src="../../API_Assets/Meadow.Foundation.Environmental.Ags01Db/Ags01Db_Fritzing.png" 
+<img src="../../API_Assets/Meadow.Foundation.Environmental.Ags01Db/Ags01Db_Frizzing.png" 
     style="width: 60%; display: block; margin-left: auto; margin-right: auto;" />
